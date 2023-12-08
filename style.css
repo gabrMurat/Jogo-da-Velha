@@ -1,0 +1,186 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(90deg, rgb(196, 85, 12)0%, rgb(100, 100, 176) 100%);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cadastro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, 0.8);
+    color: white;
+}
+.itens{
+    align-items: center;
+    font-size: 1rem;
+}
+
+.jog1, .jog2 {
+    padding: 10px;
+}
+
+.itensb {
+    font-size: 1rem;
+    background-color: rgb(168, 27, 27);
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+    color: white;
+}
+
+.itensb:hover{
+    color: rgba(168, 27, 27);
+    background-color: white;
+}
+
+.title{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.table{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.player, #nVitorias1, #vitorias2{
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+.board{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    padding: 100px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+}
+
+.cell{
+    width: 100px;
+    height: 100px;
+    border:2px solid black;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    position: relative;
+    padding: 5px;
+}
+
+
+
+.cell.x::before,
+.cell.x::after {
+    content: "";
+    height: calc(100px * 0.15);
+    width: calc(100px * 0.9);
+    background: black;
+    position: absolute;
+}
+
+.cell.x::before {
+    transform: rotate(45deg);
+}
+
+.cell.x::after {
+    transform: rotate(-45deg);
+}
+
+.cell.circle::before,
+.cell.circle::after {
+    content: "";
+    height: calc(100px * 0.9);
+    width: calc(100px * 0.9);
+    background: black;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.reset{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.reset button{
+    font-size: 2rem;
+    background-color: rgb(168, 27, 27);
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+    color: white;
+}
+
+.reset button:hover{
+    color: rgba(168, 27, 27);
+    background-color: white;
+}
+
+
+.ganhou{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.8);
+    flex-direction: column;
+}
+
+.ganhou button{
+    font-size: 2.5rem;
+    background-color: rgb(168, 27, 27);
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    margin-top: 16px;
+    color: white;
+}
+
+.ganhou button:hover{
+    color: rgb(168, 27, 27);
+    background-color: white;
+}
+
+.ganhouText {
+    color: white;
+    font-size: 5rem;
+}
+
+.showWinningMensage { 
+    display: flex;
+}
